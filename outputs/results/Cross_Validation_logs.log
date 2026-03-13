@@ -1,0 +1,578 @@
+2026-02-02 16:43:21 - training - INFO - Device: cuda
+2026-02-02 16:43:21 - training - INFO - Seed: 42
+2026-02-02 16:43:21 - training - INFO - Config: config.yaml
+2026-02-02 16:43:21 - training - INFO - 
+================================================================================
+2026-02-02 16:43:21 - training - INFO - Loading preprocessed data...
+2026-02-02 16:43:39 - training - INFO - [OK] Loaded samples
+2026-02-02 16:43:39 - training - INFO -   RBD embeddings shape: (223, 480)
+2026-02-02 16:43:39 - training - INFO -   ACE2 embeddings shape: (828, 480)
+2026-02-02 16:43:39 - training - INFO - ================================================================================
+2026-02-02 16:43:39 - training - INFO - 
+Creating 3-fold cross-validation splits...
+2026-02-02 16:43:39 - training - INFO - [OK] Folds created
+
+2026-02-02 16:43:39 - training - INFO - Data splits:
+--------------------------------------------------------------------------------
+2026-02-02 16:43:39 - training - INFO - Training Model 1/3 (seed=42)
+2026-02-02 16:43:39 - training - INFO - --------------------------------------------------------------------------------
+
+2026-02-02 16:43:40 - training - INFO - Model Architecture:
+2026-02-02 16:43:40 - training - INFO -   Total parameters:     21,382,085
+2026-02-02 16:43:40 - training - INFO -   Trainable parameters: 21,382,085
+
+2026-02-02 16:43:48 - training - INFO - ================================================================================
+2026-02-02 16:43:48 - training - INFO - STAGE 1: Balanced Training (100 epochs)
+2026-02-02 16:43:48 - training - INFO - ================================================================================
+2026-02-02 16:44:14 - training - INFO - Epoch   1 | Loss: 101.7573 | Val R : -107.0484 | Val Acc: 0.2857
+2026-02-02 16:46:43 - training - INFO - Epoch  10 | Loss: 20.4736 | Val R : -1.0165 | Val Acc: 0.1036
+2026-02-02 16:49:30 - training - INFO - Epoch  20 | Loss: 11.9428 | Val R : -0.6972 | Val Acc: 0.5071
+2026-02-02 16:52:16 - training - INFO - Epoch  30 | Loss: 8.5718 | Val R : -0.8975 | Val Acc: 0.5643
+2026-02-02 16:55:02 - training - INFO - Epoch  40 | Loss: 7.9112 | Val R : -0.4662 | Val Acc: 0.6321
+2026-02-02 16:57:49 - training - INFO - Epoch  50 | Loss: 7.5399 | Val R : -0.2779 | Val Acc: 0.6643
+2026-02-02 17:00:35 - training - INFO - Epoch  60 | Loss: 6.8863 | Val R : 0.0136 | Val Acc: 0.6929
+2026-02-02 17:03:21 - training - INFO - Epoch  70 | Loss: 6.9717 | Val R : -0.1888 | Val Acc: 0.7179
+2026-02-02 17:06:08 - training - INFO - Epoch  80 | Loss: 6.6351 | Val R : 0.0028 | Val Acc: 0.7321
+2026-02-02 17:08:54 - training - INFO - Epoch  90 | Loss: 6.3485 | Val R : 0.0367 | Val Acc: 0.7321
+2026-02-02 17:11:40 - training - INFO - Epoch 100 | Loss: 6.4157 | Val R : 0.0443 | Val Acc: 0.7393
+2026-02-02 17:11:40 - training - INFO - Stage 1 complete
+
+2026-02-02 17:11:40 - training - INFO - ================================================================================
+2026-02-02 17:11:40 - training - INFO - STAGE 2: Full Data Training (300 epochs)
+2026-02-02 17:11:40 - training - INFO - ================================================================================
+2026-02-02 17:12:11 - training - INFO - Epoch   1 | Loss: 6.4647 | Val R : 0.1044 | Val Acc: 0.7607 | Val MAE: 0.4921
+2026-02-02 17:19:06 - training - INFO - Epoch  15 | Loss: 5.5260 | Val R : 0.3863 | Val Acc: 0.8036 | Val MAE: 0.4006
+2026-02-02 17:26:29 - training - INFO - Epoch  30 | Loss: 5.4147 | Val R : 0.5705 | Val Acc: 0.8393 | Val MAE: 0.3451
+2026-02-02 17:33:53 - training - INFO - Epoch  45 | Loss: 4.8608 | Val R : 0.6808 | Val Acc: 0.8500 | Val MAE: 0.2844
+2026-02-02 17:41:17 - training - INFO - Epoch  60 | Loss: 4.6906 | Val R : 0.7673 | Val Acc: 0.8679 | Val MAE: 0.2319
+2026-02-02 17:48:40 - training - INFO - Epoch  75 | Loss: 4.4439 | Val R : 0.8290 | Val Acc: 0.8750 | Val MAE: 0.1768
+2026-02-02 17:56:04 - training - INFO - Epoch  90 | Loss: 4.4166 | Val R : 0.8205 | Val Acc: 0.8786 | Val MAE: 0.1889
+2026-02-02 18:03:27 - training - INFO - Epoch 105 | Loss: 4.5163 | Val R : 0.7860 | Val Acc: 0.8786 | Val MAE: 0.2155
+2026-02-02 18:10:51 - training - INFO - Epoch 120 | Loss: 4.0723 | Val R : 0.8081 | Val Acc: 0.8679 | Val MAE: 0.1958
+2026-02-02 18:18:15 - training - INFO - Epoch 135 | Loss: 4.0776 | Val R : 0.8207 | Val Acc: 0.9000 | Val MAE: 0.1939
+2026-02-02 18:25:39 - training - INFO - Epoch 150 | Loss: 4.2888 | Val R : 0.8068 | Val Acc: 0.8893 | Val MAE: 0.2067
+2026-02-02 18:33:03 - training - INFO - Epoch 165 | Loss: 3.8052 | Val R : 0.8567 | Val Acc: 0.9036 | Val MAE: 0.1579
+2026-02-02 18:40:27 - training - INFO - Epoch 180 | Loss: 3.7943 | Val R : 0.8234 | Val Acc: 0.9000 | Val MAE: 0.1961
+2026-02-02 18:47:50 - training - INFO - Epoch 195 | Loss: 3.9217 | Val R : 0.8374 | Val Acc: 0.9107 | Val MAE: 0.1754
+2026-02-02 18:55:14 - training - INFO - Epoch 210 | Loss: 3.5247 | Val R : 0.8436 | Val Acc: 0.9143 | Val MAE: 0.1642
+2026-02-02 19:02:38 - training - INFO - Epoch 225 | Loss: 3.7542 | Val R : 0.8310 | Val Acc: 0.9179 | Val MAE: 0.1772
+2026-02-02 19:10:02 - training - INFO - Epoch 240 | Loss: 3.7689 | Val R : 0.8374 | Val Acc: 0.9143 | Val MAE: 0.1702
+2026-02-02 19:17:25 - training - INFO - Epoch 255 | Loss: 3.6960 | Val R : 0.8368 | Val Acc: 0.9179 | Val MAE: 0.1704
+2026-02-02 19:24:49 - training - INFO - Epoch 270 | Loss: 3.5206 | Val R : 0.8382 | Val Acc: 0.9143 | Val MAE: 0.1726
+2026-02-02 19:32:13 - training - INFO - Epoch 285 | Loss: 3.6163 | Val R : 0.8391 | Val Acc: 0.9143 | Val MAE: 0.1711
+2026-02-02 19:39:37 - training - INFO - Epoch 300 | Loss: 3.7389 | Val R : 0.8377 | Val Acc: 0.9143 | Val MAE: 0.1713
+2026-02-02 19:39:41 - training - INFO - 
+================================================================================
+2026-02-02 19:39:41 - training - INFO - TEST RESULTS:
+2026-02-02 19:39:41 - training - INFO -   R : 0.8077
+2026-02-02 19:39:41 - training - INFO -   RMSE: 0.2389
+2026-02-02 19:39:41 - training - INFO -   MAE: 0.1695
+2026-02-02 19:39:41 - training - INFO -   Weighted Accuracy: 0.8849
+2026-02-02 19:39:41 - training - INFO - ================================================================================
+
+2026-02-02 19:39:41 - training - INFO - [OK] Training completed in 2h 56m 0s
+2026-02-02 19:39:41 - training - INFO - [OK] Model saved: fold_1_seed_1.pt
+
+2026-02-02 19:39:41 - training - INFO - 
+--------------------------------------------------------------------------------
+2026-02-02 19:39:41 - training - INFO - Training Model 2/3 (seed=43)
+2026-02-02 19:39:41 - training - INFO - --------------------------------------------------------------------------------
+
+2026-02-02 19:39:41 - training - INFO - Model Architecture:
+2026-02-02 19:39:41 - training - INFO -   Total parameters:     21,382,085
+2026-02-02 19:39:41 - training - INFO -   Trainable parameters: 21,382,085
+
+2026-02-02 19:39:41 - training - INFO - ================================================================================
+2026-02-02 19:39:41 - training - INFO - STAGE 1: Balanced Training (100 epochs)
+2026-02-02 19:39:41 - training - INFO - ================================================================================
+2026-02-02 19:39:59 - training - INFO - Epoch   1 | Loss: 96.4836 | Val R : -105.9274 | Val Acc: 0.4821
+2026-02-02 19:42:29 - training - INFO - Epoch  10 | Loss: 21.2275 | Val R : -1.7764 | Val Acc: 0.1107
+2026-02-02 19:45:15 - training - INFO - Epoch  20 | Loss: 11.9035 | Val R : -0.5978 | Val Acc: 0.2036
+2026-02-02 19:48:02 - training - INFO - Epoch  30 | Loss: 8.6432 | Val R : -0.2920 | Val Acc: 0.6536
+2026-02-02 19:50:48 - training - INFO - Epoch  40 | Loss: 7.9355 | Val R : -0.4825 | Val Acc: 0.6214
+2026-02-02 19:53:34 - training - INFO - Epoch  50 | Loss: 7.8802 | Val R : -0.0187 | Val Acc: 0.6250
+2026-02-02 19:56:20 - training - INFO - Epoch  60 | Loss: 7.3592 | Val R : -0.1563 | Val Acc: 0.7036
+2026-02-02 19:59:07 - training - INFO - Epoch  70 | Loss: 6.9072 | Val R : 0.0617 | Val Acc: 0.7036
+2026-02-02 20:01:53 - training - INFO - Epoch  80 | Loss: 6.2814 | Val R : 0.1591 | Val Acc: 0.7464
+2026-02-02 20:04:39 - training - INFO - Epoch  90 | Loss: 6.2870 | Val R : 0.1155 | Val Acc: 0.7571
+2026-02-02 20:07:25 - training - INFO - Epoch 100 | Loss: 6.0870 | Val R : 0.1097 | Val Acc: 0.7571
+2026-02-02 20:07:25 - training - INFO - Stage 1 complete
+
+2026-02-02 20:07:25 - training - INFO - ================================================================================
+2026-02-02 20:07:25 - training - INFO - STAGE 2: Full Data Training (300 epochs)
+2026-02-02 20:07:25 - training - INFO - ================================================================================
+2026-02-02 20:07:56 - training - INFO - Epoch   1 | Loss: 6.1443 | Val R : 0.1850 | Val Acc: 0.7607 | Val MAE: 0.4647
+2026-02-02 20:14:51 - training - INFO - Epoch  15 | Loss: 5.6373 | Val R : 0.5848 | Val Acc: 0.8393 | Val MAE: 0.3216
+2026-02-02 20:22:15 - training - INFO - Epoch  30 | Loss: 5.3745 | Val R : 0.6278 | Val Acc: 0.8357 | Val MAE: 0.3190
+2026-02-02 20:29:39 - training - INFO - Epoch  45 | Loss: 4.8269 | Val R : 0.7164 | Val Acc: 0.8536 | Val MAE: 0.2654
+2026-02-02 20:37:03 - training - INFO - Epoch  60 | Loss: 4.7734 | Val R : 0.7911 | Val Acc: 0.8679 | Val MAE: 0.2080
+2026-02-02 20:44:28 - training - INFO - Epoch  75 | Loss: 4.5173 | Val R : 0.7615 | Val Acc: 0.8679 | Val MAE: 0.2424
+2026-02-02 20:51:53 - training - INFO - Epoch  90 | Loss: 4.5540 | Val R : 0.8351 | Val Acc: 0.8643 | Val MAE: 0.1675
+2026-02-02 20:59:17 - training - INFO - Epoch 105 | Loss: 4.4496 | Val R : 0.8118 | Val Acc: 0.8857 | Val MAE: 0.2013
+2026-02-02 21:06:43 - training - INFO - Epoch 120 | Loss: 4.1410 | Val R : 0.8123 | Val Acc: 0.8679 | Val MAE: 0.1981
+2026-02-02 21:14:07 - training - INFO - Epoch 135 | Loss: 4.3315 | Val R : 0.8323 | Val Acc: 0.9071 | Val MAE: 0.1789
+2026-02-02 21:21:32 - training - INFO - Epoch 150 | Loss: 4.2000 | Val R : 0.8276 | Val Acc: 0.9000 | Val MAE: 0.1812
+2026-02-02 21:28:57 - training - INFO - Epoch 165 | Loss: 4.4160 | Val R : 0.8380 | Val Acc: 0.9000 | Val MAE: 0.1642
+2026-02-02 21:36:20 - training - INFO - Epoch 180 | Loss: 3.9106 | Val R : 0.8403 | Val Acc: 0.9071 | Val MAE: 0.1696
+2026-02-02 21:43:45 - training - INFO - Epoch 195 | Loss: 3.9847 | Val R : 0.8444 | Val Acc: 0.9000 | Val MAE: 0.1659
+2026-02-02 21:51:09 - training - INFO - Epoch 210 | Loss: 3.7889 | Val R : 0.8356 | Val Acc: 0.9000 | Val MAE: 0.1730
+2026-02-02 21:58:33 - training - INFO - Epoch 225 | Loss: 3.4525 | Val R : 0.8294 | Val Acc: 0.8964 | Val MAE: 0.1745
+2026-02-02 22:05:58 - training - INFO - Epoch 240 | Loss: 3.6833 | Val R : 0.8387 | Val Acc: 0.9000 | Val MAE: 0.1693
+2026-02-02 22:13:22 - training - INFO - Epoch 255 | Loss: 3.9604 | Val R : 0.8304 | Val Acc: 0.9036 | Val MAE: 0.1792
+2026-02-02 22:20:46 - training - INFO - Epoch 270 | Loss: 3.7692 | Val R : 0.8338 | Val Acc: 0.9071 | Val MAE: 0.1701
+2026-02-02 22:28:09 - training - INFO - Epoch 285 | Loss: 4.0254 | Val R : 0.8293 | Val Acc: 0.9071 | Val MAE: 0.1733
+2026-02-02 22:35:32 - training - INFO - Epoch 300 | Loss: 3.4609 | Val R : 0.8321 | Val Acc: 0.9071 | Val MAE: 0.1720
+2026-02-02 22:35:36 - training - INFO - 
+================================================================================
+2026-02-02 22:35:36 - training - INFO - TEST RESULTS:
+2026-02-02 22:35:36 - training - INFO -   R : 0.7814
+2026-02-02 22:35:36 - training - INFO -   RMSE: 0.2134
+2026-02-02 22:35:36 - training - INFO -   MAE: 0.1942
+2026-02-02 22:35:36 - training - INFO -   Weighted Accuracy: 0.8446
+2026-02-02 22:35:36 - training - INFO - ================================================================================
+
+2026-02-02 22:35:36 - training - INFO - [OK] Training completed in 2h 55m 54s
+2026-02-02 22:35:36 - training - INFO - [OK] Model saved: fold_1_seed_2.pt
+
+2026-02-02 22:35:36 - training - INFO - 
+--------------------------------------------------------------------------------
+2026-02-02 22:35:36 - training - INFO - Training Model 3/3 (seed=44)
+2026-02-02 22:35:36 - training - INFO - --------------------------------------------------------------------------------
+
+2026-02-02 22:35:36 - training - INFO - Model Architecture:
+2026-02-02 22:35:36 - training - INFO -   Total parameters:     21,382,085
+2026-02-02 22:35:36 - training - INFO -   Trainable parameters: 21,382,085
+
+2026-02-02 22:35:36 - training - INFO - ================================================================================
+2026-02-02 22:35:36 - training - INFO - STAGE 1: Balanced Training (100 epochs)
+2026-02-02 22:35:36 - training - INFO - ================================================================================
+2026-02-02 22:35:54 - training - INFO - Epoch   1 | Loss: 82.5809 | Val R : -89.5940 | Val Acc: 0.2000
+2026-02-02 22:38:24 - training - INFO - Epoch  10 | Loss: 18.4007 | Val R : -0.2152 | Val Acc: 0.1071
+2026-02-02 22:41:10 - training - INFO - Epoch  20 | Loss: 10.9867 | Val R : -1.4403 | Val Acc: 0.6500
+2026-02-02 22:43:56 - training - INFO - Epoch  30 | Loss: 8.5558 | Val R : -0.5271 | Val Acc: 0.5821
+2026-02-02 22:46:42 - training - INFO - Epoch  40 | Loss: 7.7078 | Val R : -0.6482 | Val Acc: 0.5679
+2026-02-02 22:49:28 - training - INFO - Epoch  50 | Loss: 7.0801 | Val R : -0.2882 | Val Acc: 0.6179
+2026-02-02 22:52:14 - training - INFO - Epoch  60 | Loss: 7.0752 | Val R : -0.0621 | Val Acc: 0.6643
+2026-02-02 22:55:00 - training - INFO - Epoch  70 | Loss: 6.8453 | Val R : -0.0344 | Val Acc: 0.7107
+2026-02-02 22:57:47 - training - INFO - Epoch  80 | Loss: 6.2734 | Val R : -0.0463 | Val Acc: 0.7607
+2026-02-02 23:00:33 - training - INFO - Epoch  90 | Loss: 6.6646 | Val R : 0.0920 | Val Acc: 0.7464
+2026-02-02 23:03:19 - training - INFO - Epoch 100 | Loss: 6.7402 | Val R : 0.1496 | Val Acc: 0.7464
+2026-02-02 23:03:19 - training - INFO - Stage 1 complete
+
+2026-02-02 23:03:19 - training - INFO - ================================================================================
+2026-02-02 23:03:19 - training - INFO - STAGE 2: Full Data Training (300 epochs)
+2026-02-02 23:03:19 - training - INFO - ================================================================================
+2026-02-02 23:03:50 - training - INFO - Epoch   1 | Loss: 6.4361 | Val R : 0.2000 | Val Acc: 0.7571 | Val MAE: 0.4578
+2026-02-02 23:10:44 - training - INFO - Epoch  15 | Loss: 5.4167 | Val R : 0.2895 | Val Acc: 0.8107 | Val MAE: 0.4457
+2026-02-02 23:18:07 - training - INFO - Epoch  30 | Loss: 4.8173 | Val R : 0.6542 | Val Acc: 0.8464 | Val MAE: 0.2927
+2026-02-02 23:25:32 - training - INFO - Epoch  45 | Loss: 4.8134 | Val R : 0.7098 | Val Acc: 0.8750 | Val MAE: 0.2740
+2026-02-02 23:32:56 - training - INFO - Epoch  60 | Loss: 4.5813 | Val R : 0.7343 | Val Acc: 0.8643 | Val MAE: 0.2512
+2026-02-02 23:40:19 - training - INFO - Epoch  75 | Loss: 4.7529 | Val R : 0.6992 | Val Acc: 0.8750 | Val MAE: 0.2766
+2026-02-02 23:47:43 - training - INFO - Epoch  90 | Loss: 4.5148 | Val R : 0.8097 | Val Acc: 0.8714 | Val MAE: 0.2016
+2026-02-02 23:55:07 - training - INFO - Epoch 105 | Loss: 4.4343 | Val R : 0.7932 | Val Acc: 0.8786 | Val MAE: 0.2105
+2026-02-03 00:02:31 - training - INFO - Epoch 120 | Loss: 4.1783 | Val R : 0.7860 | Val Acc: 0.8893 | Val MAE: 0.2113
+2026-02-03 00:09:55 - training - INFO - Epoch 135 | Loss: 4.3614 | Val R : 0.8030 | Val Acc: 0.9000 | Val MAE: 0.2058
+2026-02-03 00:17:19 - training - INFO - Epoch 150 | Loss: 4.1248 | Val R : 0.8235 | Val Acc: 0.9036 | Val MAE: 0.1865
+2026-02-03 00:24:43 - training - INFO - Epoch 165 | Loss: 3.9127 | Val R : 0.8133 | Val Acc: 0.9071 | Val MAE: 0.1967
+2026-02-03 00:32:07 - training - INFO - Epoch 180 | Loss: 3.8603 | Val R : 0.8566 | Val Acc: 0.9107 | Val MAE: 0.1581
+2026-02-03 00:39:31 - training - INFO - Epoch 195 | Loss: 3.9180 | Val R : 0.8471 | Val Acc: 0.9143 | Val MAE: 0.1659
+2026-02-03 00:46:55 - training - INFO - Epoch 210 | Loss: 3.7800 | Val R : 0.8210 | Val Acc: 0.9036 | Val MAE: 0.1816
+2026-02-03 00:54:19 - training - INFO - Epoch 225 | Loss: 3.7608 | Val R : 0.8334 | Val Acc: 0.9107 | Val MAE: 0.1774
+2026-02-03 01:01:43 - training - INFO - Epoch 240 | Loss: 3.8334 | Val R : 0.8367 | Val Acc: 0.9143 | Val MAE: 0.1710
+2026-02-03 01:09:07 - training - INFO - Epoch 255 | Loss: 3.9279 | Val R : 0.8405 | Val Acc: 0.9143 | Val MAE: 0.1764
+2026-02-03 01:16:31 - training - INFO - Epoch 270 | Loss: 3.8972 | Val R : 0.8483 | Val Acc: 0.9143 | Val MAE: 0.1649
+2026-02-03 01:23:55 - training - INFO - Epoch 285 | Loss: 3.7234 | Val R : 0.8438 | Val Acc: 0.9143 | Val MAE: 0.1699
+2026-02-03 01:31:19 - training - INFO - Epoch 300 | Loss: 3.5980 | Val R : 0.8445 | Val Acc: 0.9143 | Val MAE: 0.1686
+2026-02-03 01:31:23 - training - INFO - 
+================================================================================
+2026-02-03 01:31:23 - training - INFO - TEST RESULTS:
+2026-02-03 01:31:23 - training - INFO -   R : 0.8013
+2026-02-03 01:31:23 - training - INFO -   RMSE: 0.2099
+2026-02-03 01:31:23 - training - INFO -   MAE: 0.1818
+2026-02-03 01:31:23 - training - INFO -   Weighted Accuracy: 0.8674
+2026-02-03 01:31:23 - training - INFO - ================================================================================
+
+2026-02-03 01:31:23 - training - INFO - [OK] Training completed in 2h 55m 46s
+2026-02-03 01:31:23 - training - INFO - [OK] Model saved: fold_1_seed_3.pt
+
+2026-02-03 01:31:23 - training - INFO - Data splits:
+--------------------------------------------------------------------------------
+2026-02-03 01:31:23 - training - INFO - Training Model 1/3 (seed=142)
+2026-02-03 01:31:23 - training - INFO - --------------------------------------------------------------------------------
+
+2026-02-03 01:31:23 - training - INFO - Model Architecture:
+2026-02-03 01:31:23 - training - INFO -   Total parameters:     21,382,085
+2026-02-03 01:31:23 - training - INFO -   Trainable parameters: 21,382,085
+
+2026-02-03 01:31:23 - training - INFO - ================================================================================
+2026-02-03 01:31:23 - training - INFO - STAGE 1: Balanced Training (100 epochs)
+2026-02-03 01:31:23 - training - INFO - ================================================================================
+2026-02-03 01:31:41 - training - INFO - Epoch   1 | Loss: 90.2110 | Val R : -120.4955 | Val Acc: 0.0893
+2026-02-03 01:34:13 - training - INFO - Epoch  10 | Loss: 18.6774 | Val R : -0.5049 | Val Acc: 0.1429
+2026-02-03 01:37:03 - training - INFO - Epoch  20 | Loss: 11.3065 | Val R : -1.5603 | Val Acc: 0.4000
+2026-02-03 01:39:53 - training - INFO - Epoch  30 | Loss: 8.3112 | Val R : -0.8913 | Val Acc: 0.7036
+2026-02-03 01:42:43 - training - INFO - Epoch  40 | Loss: 7.5191 | Val R : -0.2258 | Val Acc: 0.6929
+2026-02-03 01:45:32 - training - INFO - Epoch  50 | Loss: 6.8881 | Val R : -0.0420 | Val Acc: 0.7607
+2026-02-03 01:48:21 - training - INFO - Epoch  60 | Loss: 6.9205 | Val R : 0.0593 | Val Acc: 0.7750
+2026-02-03 01:51:10 - training - INFO - Epoch  70 | Loss: 6.1877 | Val R : -0.0401 | Val Acc: 0.8036
+2026-02-03 01:53:59 - training - INFO - Epoch  80 | Loss: 6.6317 | Val R : 0.1778 | Val Acc: 0.7893
+2026-02-03 01:56:47 - training - INFO - Epoch  90 | Loss: 6.2745 | Val R : 0.0736 | Val Acc: 0.7964
+2026-02-03 01:59:36 - training - INFO - Epoch 100 | Loss: 6.0611 | Val R : 0.1098 | Val Acc: 0.7893
+2026-02-03 01:59:36 - training - INFO - Stage 1 complete
+
+2026-02-03 01:59:36 - training - INFO - ================================================================================
+2026-02-03 01:59:36 - training - INFO - STAGE 2: Full Data Training (300 epochs)
+2026-02-03 01:59:36 - training - INFO - ================================================================================
+2026-02-03 02:00:07 - training - INFO - Epoch   1 | Loss: 5.9036 | Val R : 0.2050 | Val Acc: 0.8036 | Val MAE: 0.4273
+2026-02-03 02:07:02 - training - INFO - Epoch  15 | Loss: 5.3631 | Val R : 0.2446 | Val Acc: 0.8536 | Val MAE: 0.4249
+2026-02-03 02:14:26 - training - INFO - Epoch  30 | Loss: 4.7376 | Val R : 0.6999 | Val Acc: 0.8536 | Val MAE: 0.2433
+2026-02-03 02:21:50 - training - INFO - Epoch  45 | Loss: 4.8457 | Val R : 0.6175 | Val Acc: 0.8500 | Val MAE: 0.2808
+2026-02-03 02:29:14 - training - INFO - Epoch  60 | Loss: 4.6072 | Val R : 0.7023 | Val Acc: 0.8571 | Val MAE: 0.2527
+2026-02-03 02:36:39 - training - INFO - Epoch  75 | Loss: 4.2976 | Val R : 0.7421 | Val Acc: 0.8571 | Val MAE: 0.2183
+2026-02-03 02:44:03 - training - INFO - Epoch  90 | Loss: 4.2741 | Val R : 0.7898 | Val Acc: 0.8571 | Val MAE: 0.1860
+2026-02-03 02:51:28 - training - INFO - Epoch 105 | Loss: 4.1452 | Val R : 0.7179 | Val Acc: 0.8607 | Val MAE: 0.2409
+2026-02-03 02:58:53 - training - INFO - Epoch 120 | Loss: 4.0958 | Val R : 0.7852 | Val Acc: 0.8536 | Val MAE: 0.1999
+2026-02-03 03:06:17 - training - INFO - Epoch 135 | Loss: 3.8199 | Val R : 0.7620 | Val Acc: 0.8714 | Val MAE: 0.2143
+2026-02-03 03:13:42 - training - INFO - Epoch 150 | Loss: 4.0709 | Val R : 0.7930 | Val Acc: 0.8607 | Val MAE: 0.1672
+2026-02-03 03:21:07 - training - INFO - Epoch 165 | Loss: 3.5775 | Val R : 0.7960 | Val Acc: 0.8607 | Val MAE: 0.1850
+2026-02-03 03:28:34 - training - INFO - Epoch 180 | Loss: 3.5856 | Val R : 0.8173 | Val Acc: 0.8714 | Val MAE: 0.1709
+2026-02-03 03:36:00 - training - INFO - Epoch 195 | Loss: 3.7330 | Val R : 0.8193 | Val Acc: 0.8714 | Val MAE: 0.1641
+2026-02-03 03:43:25 - training - INFO - Epoch 210 | Loss: 3.7907 | Val R : 0.8158 | Val Acc: 0.8679 | Val MAE: 0.1722
+2026-02-03 03:50:50 - training - INFO - Epoch 225 | Loss: 3.6598 | Val R : 0.8149 | Val Acc: 0.8714 | Val MAE: 0.1762
+2026-02-03 03:58:16 - training - INFO - Epoch 240 | Loss: 3.7727 | Val R : 0.8047 | Val Acc: 0.8714 | Val MAE: 0.1774
+2026-02-03 04:05:41 - training - INFO - Epoch 255 | Loss: 3.5339 | Val R : 0.8072 | Val Acc: 0.8679 | Val MAE: 0.1760
+2026-02-03 04:13:08 - training - INFO - Epoch 270 | Loss: 3.4793 | Val R : 0.8143 | Val Acc: 0.8714 | Val MAE: 0.1730
+2026-02-03 04:20:35 - training - INFO - Epoch 285 | Loss: 3.3328 | Val R : 0.8144 | Val Acc: 0.8714 | Val MAE: 0.1738
+2026-02-03 04:28:02 - training - INFO - Epoch 300 | Loss: 2.9557 | Val R : 0.8125 | Val Acc: 0.8714 | Val MAE: 0.1742
+2026-02-03 04:28:05 - training - INFO - 
+================================================================================
+2026-02-03 04:28:05 - training - INFO - TEST RESULTS:
+2026-02-03 04:28:05 - training - INFO -   R : 0.7940
+2026-02-03 04:28:05 - training - INFO -   RMSE: 0.2270
+2026-02-03 04:28:05 - training - INFO -   MAE: 0.2217
+2026-02-03 04:28:05 - training - INFO -   Weighted Accuracy: 0.8346
+2026-02-03 04:28:05 - training - INFO - ================================================================================
+
+2026-02-03 04:28:05 - training - INFO - [OK] Training completed in 2h 56m 42s
+2026-02-03 04:28:06 - training - INFO - [OK] Model saved: fold_2_seed_1.pt
+
+2026-02-03 04:28:06 - training - INFO - 
+--------------------------------------------------------------------------------
+2026-02-03 04:28:06 - training - INFO - Training Model 2/3 (seed=143)
+2026-02-03 04:28:06 - training - INFO - --------------------------------------------------------------------------------
+
+2026-02-03 04:28:06 - training - INFO - Model Architecture:
+2026-02-03 04:28:06 - training - INFO -   Total parameters:     21,382,085
+2026-02-03 04:28:06 - training - INFO -   Trainable parameters: 21,382,085
+
+2026-02-03 04:28:06 - training - INFO - ================================================================================
+2026-02-03 04:28:06 - training - INFO - STAGE 1: Balanced Training (100 epochs)
+2026-02-03 04:28:06 - training - INFO - ================================================================================
+2026-02-03 04:28:24 - training - INFO - Epoch   1 | Loss: 86.5500 | Val R : -108.7209 | Val Acc: 0.6536
+2026-02-03 04:30:57 - training - INFO - Epoch  10 | Loss: 19.4161 | Val R : -0.8725 | Val Acc: 0.1714
+2026-02-03 04:33:47 - training - INFO - Epoch  20 | Loss: 11.2393 | Val R : -1.3238 | Val Acc: 0.4536
+2026-02-03 04:36:37 - training - INFO - Epoch  30 | Loss: 8.7699 | Val R : -0.7902 | Val Acc: 0.6964
+2026-02-03 04:39:27 - training - INFO - Epoch  40 | Loss: 7.6427 | Val R : -0.0186 | Val Acc: 0.7107
+2026-02-03 04:42:17 - training - INFO - Epoch  50 | Loss: 7.2892 | Val R : -0.2654 | Val Acc: 0.7143
+2026-02-03 04:45:07 - training - INFO - Epoch  60 | Loss: 6.7304 | Val R : -0.0202 | Val Acc: 0.7821
+2026-02-03 04:47:56 - training - INFO - Epoch  70 | Loss: 6.1415 | Val R : 0.0677 | Val Acc: 0.7929
+2026-02-03 04:50:45 - training - INFO - Epoch  80 | Loss: 6.3208 | Val R : 0.0758 | Val Acc: 0.7929
+2026-02-03 04:53:35 - training - INFO - Epoch  90 | Loss: 6.0689 | Val R : 0.1386 | Val Acc: 0.8000
+2026-02-03 04:56:23 - training - INFO - Epoch 100 | Loss: 6.5881 | Val R : 0.1044 | Val Acc: 0.8000
+2026-02-03 04:56:23 - training - INFO - Stage 1 complete
+
+2026-02-03 04:56:23 - training - INFO - ================================================================================
+2026-02-03 04:56:23 - training - INFO - STAGE 2: Full Data Training (300 epochs)
+2026-02-03 04:56:23 - training - INFO - ================================================================================
+2026-02-03 04:56:54 - training - INFO - Epoch   1 | Loss: 5.7807 | Val R : 0.1688 | Val Acc: 0.8000 | Val MAE: 0.4420
+2026-02-03 05:03:52 - training - INFO - Epoch  15 | Loss: 5.2576 | Val R : 0.3897 | Val Acc: 0.8571 | Val MAE: 0.3721
+2026-02-03 05:11:19 - training - INFO - Epoch  30 | Loss: 5.2741 | Val R : 0.6393 | Val Acc: 0.8643 | Val MAE: 0.2812
+2026-02-03 05:18:46 - training - INFO - Epoch  45 | Loss: 4.7117 | Val R : 0.7063 | Val Acc: 0.8464 | Val MAE: 0.2499
+2026-02-03 05:26:13 - training - INFO - Epoch  60 | Loss: 4.7418 | Val R : 0.7160 | Val Acc: 0.8500 | Val MAE: 0.2417
+2026-02-03 05:33:39 - training - INFO - Epoch  75 | Loss: 4.3143 | Val R : 0.7728 | Val Acc: 0.8643 | Val MAE: 0.1936
+2026-02-03 05:41:07 - training - INFO - Epoch  90 | Loss: 4.5778 | Val R : 0.8029 | Val Acc: 0.8536 | Val MAE: 0.1863
+2026-02-03 05:48:35 - training - INFO - Epoch 105 | Loss: 4.3085 | Val R : 0.7954 | Val Acc: 0.8607 | Val MAE: 0.1773
+2026-02-03 05:56:03 - training - INFO - Epoch 120 | Loss: 4.0068 | Val R : 0.8338 | Val Acc: 0.8607 | Val MAE: 0.1541
+2026-02-03 06:03:29 - training - INFO - Epoch 135 | Loss: 3.6542 | Val R : 0.7817 | Val Acc: 0.8571 | Val MAE: 0.1942
+2026-02-03 06:10:57 - training - INFO - Epoch 150 | Loss: 3.7451 | Val R : 0.7875 | Val Acc: 0.8607 | Val MAE: 0.1927
+2026-02-03 06:18:24 - training - INFO - Epoch 165 | Loss: 3.7714 | Val R : 0.8036 | Val Acc: 0.8536 | Val MAE: 0.1743
+2026-02-03 06:25:51 - training - INFO - Epoch 180 | Loss: 3.8211 | Val R : 0.8337 | Val Acc: 0.8607 | Val MAE: 0.1455
+2026-02-03 06:33:19 - training - INFO - Epoch 195 | Loss: 3.4071 | Val R : 0.8169 | Val Acc: 0.8679 | Val MAE: 0.1769
+2026-02-03 06:40:47 - training - INFO - Epoch 210 | Loss: 3.8667 | Val R : 0.8315 | Val Acc: 0.8643 | Val MAE: 0.1628
+2026-02-03 06:48:13 - training - INFO - Epoch 225 | Loss: 3.6293 | Val R : 0.8191 | Val Acc: 0.8643 | Val MAE: 0.1680
+2026-02-03 06:55:41 - training - INFO - Epoch 240 | Loss: 3.6747 | Val R : 0.8242 | Val Acc: 0.8643 | Val MAE: 0.1682
+2026-02-03 07:03:07 - training - INFO - Epoch 255 | Loss: 3.5230 | Val R : 0.8216 | Val Acc: 0.8643 | Val MAE: 0.1707
+2026-02-03 07:10:34 - training - INFO - Epoch 270 | Loss: 3.6261 | Val R : 0.8212 | Val Acc: 0.8643 | Val MAE: 0.1747
+2026-02-03 07:18:01 - training - INFO - Epoch 285 | Loss: 3.2092 | Val R : 0.8231 | Val Acc: 0.8643 | Val MAE: 0.1720
+2026-02-03 07:25:27 - training - INFO - Epoch 300 | Loss: 3.5186 | Val R : 0.8232 | Val Acc: 0.8679 | Val MAE: 0.1721
+2026-02-03 07:25:30 - training - INFO - 
+================================================================================
+2026-02-03 07:25:30 - training - INFO - TEST RESULTS:
+2026-02-03 07:25:30 - training - INFO -   R : 0.8300
+2026-02-03 07:25:30 - training - INFO -   RMSE: 0.2297
+2026-02-03 07:25:30 - training - INFO -   MAE: 0.1666
+2026-02-03 07:25:30 - training - INFO -   Weighted Accuracy: 0.8974
+2026-02-03 07:25:30 - training - INFO - ================================================================================
+
+2026-02-03 07:25:30 - training - INFO - [OK] Training completed in 2h 57m 24s
+2026-02-03 07:25:30 - training - INFO - [OK] Model saved: fold_2_seed_2.pt
+
+2026-02-03 07:25:30 - training - INFO - 
+--------------------------------------------------------------------------------
+2026-02-03 07:25:30 - training - INFO - Training Model 3/3 (seed=144)
+2026-02-03 07:25:30 - training - INFO - --------------------------------------------------------------------------------
+
+2026-02-03 07:25:31 - training - INFO - Model Architecture:
+2026-02-03 07:25:31 - training - INFO -   Total parameters:     21,382,085
+2026-02-03 07:25:31 - training - INFO -   Trainable parameters: 21,382,085
+
+2026-02-03 07:25:31 - training - INFO - ================================================================================
+2026-02-03 07:25:31 - training - INFO - STAGE 1: Balanced Training (100 epochs)
+2026-02-03 07:25:31 - training - INFO - ================================================================================
+2026-02-03 07:25:49 - training - INFO - Epoch   1 | Loss: 85.8387 | Val R : -102.9305 | Val Acc: 0.4286
+2026-02-03 07:28:22 - training - INFO - Epoch  10 | Loss: 20.0564 | Val R : -1.6074 | Val Acc: 0.1679
+2026-02-03 07:31:11 - training - INFO - Epoch  20 | Loss: 11.2779 | Val R : -0.4730 | Val Acc: 0.6500
+2026-02-03 07:34:01 - training - INFO - Epoch  30 | Loss: 8.3570 | Val R : -1.1760 | Val Acc: 0.5536
+2026-02-03 07:36:51 - training - INFO - Epoch  40 | Loss: 7.5666 | Val R : -0.2346 | Val Acc: 0.6893
+2026-02-03 07:39:41 - training - INFO - Epoch  50 | Loss: 7.1711 | Val R : 0.0090 | Val Acc: 0.7179
+2026-02-03 07:42:31 - training - INFO - Epoch  60 | Loss: 7.2071 | Val R : 0.0440 | Val Acc: 0.7786
+2026-02-03 07:45:21 - training - INFO - Epoch  70 | Loss: 6.2935 | Val R : -0.1610 | Val Acc: 0.7929
+2026-02-03 07:48:11 - training - INFO - Epoch  80 | Loss: 6.3516 | Val R : 0.0530 | Val Acc: 0.8071
+2026-02-03 07:51:01 - training - INFO - Epoch  90 | Loss: 6.4176 | Val R : 0.1386 | Val Acc: 0.7929
+2026-02-03 07:53:50 - training - INFO - Epoch 100 | Loss: 6.1120 | Val R : 0.1666 | Val Acc: 0.7929
+2026-02-03 07:53:50 - training - INFO - Stage 1 complete
+
+2026-02-03 07:53:50 - training - INFO - ================================================================================
+2026-02-03 07:53:50 - training - INFO - STAGE 2: Full Data Training (300 epochs)
+2026-02-03 07:53:50 - training - INFO - ================================================================================
+2026-02-03 07:54:21 - training - INFO - Epoch   1 | Loss: 5.9253 | Val R : 0.2008 | Val Acc: 0.8143 | Val MAE: 0.4300
+2026-02-03 08:01:18 - training - INFO - Epoch  15 | Loss: 5.4047 | Val R : 0.6269 | Val Acc: 0.8464 | Val MAE: 0.2781
+2026-02-03 08:08:44 - training - INFO - Epoch  30 | Loss: 4.8599 | Val R : 0.5037 | Val Acc: 0.8536 | Val MAE: 0.3369
+2026-02-03 08:16:08 - training - INFO - Epoch  45 | Loss: 4.4833 | Val R : 0.6637 | Val Acc: 0.8643 | Val MAE: 0.2680
+2026-02-03 08:23:36 - training - INFO - Epoch  60 | Loss: 4.2621 | Val R : 0.6679 | Val Acc: 0.8643 | Val MAE: 0.2645
+2026-02-03 08:31:02 - training - INFO - Epoch  75 | Loss: 4.2139 | Val R : 0.7390 | Val Acc: 0.8714 | Val MAE: 0.2263
+2026-02-03 08:38:30 - training - INFO - Epoch  90 | Loss: 4.1149 | Val R : 0.7871 | Val Acc: 0.8679 | Val MAE: 0.1834
+2026-02-03 08:45:57 - training - INFO - Epoch 105 | Loss: 4.2074 | Val R : 0.7740 | Val Acc: 0.8464 | Val MAE: 0.2114
+2026-02-03 08:53:23 - training - INFO - Epoch 120 | Loss: 3.9071 | Val R : 0.7699 | Val Acc: 0.8643 | Val MAE: 0.2003
+2026-02-03 09:00:50 - training - INFO - Epoch 135 | Loss: 4.2921 | Val R : 0.8119 | Val Acc: 0.8643 | Val MAE: 0.1693
+2026-02-03 09:08:17 - training - INFO - Epoch 150 | Loss: 4.0144 | Val R : 0.8041 | Val Acc: 0.8643 | Val MAE: 0.1809
+2026-02-03 09:15:42 - training - INFO - Epoch 165 | Loss: 3.7009 | Val R : 0.8033 | Val Acc: 0.8714 | Val MAE: 0.1834
+2026-02-03 09:23:08 - training - INFO - Epoch 180 | Loss: 3.7898 | Val R : 0.8120 | Val Acc: 0.8714 | Val MAE: 0.1792
+2026-02-03 09:30:34 - training - INFO - Epoch 195 | Loss: 3.5864 | Val R : 0.8054 | Val Acc: 0.8679 | Val MAE: 0.1830
+2026-02-03 09:38:02 - training - INFO - Epoch 210 | Loss: 3.7002 | Val R : 0.8197 | Val Acc: 0.8607 | Val MAE: 0.1699
+2026-02-03 09:45:29 - training - INFO - Epoch 225 | Loss: 3.5059 | Val R : 0.7860 | Val Acc: 0.8679 | Val MAE: 0.1888
+2026-02-03 09:52:56 - training - INFO - Epoch 240 | Loss: 3.5654 | Val R : 0.8248 | Val Acc: 0.8679 | Val MAE: 0.1689
+2026-02-03 10:00:22 - training - INFO - Epoch 255 | Loss: 3.4854 | Val R : 0.8169 | Val Acc: 0.8714 | Val MAE: 0.1749
+2026-02-03 10:07:48 - training - INFO - Epoch 270 | Loss: 3.2893 | Val R : 0.8151 | Val Acc: 0.8643 | Val MAE: 0.1759
+2026-02-03 10:15:12 - training - INFO - Epoch 285 | Loss: 3.3351 | Val R : 0.8141 | Val Acc: 0.8714 | Val MAE: 0.1761
+2026-02-03 10:22:36 - training - INFO - Epoch 300 | Loss: 3.3840 | Val R : 0.8124 | Val Acc: 0.8714 | Val MAE: 0.1775
+2026-02-03 10:22:40 - training - INFO - 
+================================================================================
+2026-02-03 10:22:40 - training - INFO - TEST RESULTS:
+2026-02-03 10:22:40 - training - INFO -   R : 0.8014
+2026-02-03 10:22:40 - training - INFO -   RMSE: 0.2308
+2026-02-03 10:22:40 - training - INFO -   MAE: 0.1909
+2026-02-03 10:22:40 - training - INFO -   Weighted Accuracy: 0.87060
+2026-02-03 10:22:40 - training - INFO - ================================================================================
+
+2026-02-03 10:22:40 - training - INFO - [OK] Training completed in 2h 57m 9s
+2026-02-03 10:22:40 - training - INFO - [OK] Model saved: fold_2_seed_3.pt
+
+2026-02-03 10:22:40 - training - INFO - Data splits:
+--------------------------------------------------------------------------------
+2026-02-03 10:22:40 - training - INFO - Training Model 1/3 (seed=242)
+2026-02-03 10:22:40 - training - INFO - --------------------------------------------------------------------------------
+
+2026-02-03 10:22:41 - training - INFO - Model Architecture:
+2026-02-03 10:22:41 - training - INFO -   Total parameters:     21,382,085
+2026-02-03 10:22:41 - training - INFO -   Trainable parameters: 21,382,085
+
+2026-02-03 10:22:41 - training - INFO - ================================================================================
+2026-02-03 10:22:41 - training - INFO - STAGE 1: Balanced Training (100 epochs)
+2026-02-03 10:22:41 - training - INFO - ================================================================================
+2026-02-03 10:22:59 - training - INFO - Epoch   1 | Loss: 92.8720 | Val R : -118.6360 | Val Acc: 0.3679
+2026-02-03 10:25:37 - training - INFO - Epoch  10 | Loss: 19.9391 | Val R : -1.5733 | Val Acc: 0.1321
+2026-02-03 10:28:33 - training - INFO - Epoch  20 | Loss: 11.1931 | Val R : -0.9101 | Val Acc: 0.3643
+2026-02-03 10:31:30 - training - INFO - Epoch  30 | Loss: 8.3821 | Val R : -0.7640 | Val Acc: 0.6429
+2026-02-03 10:34:30 - training - INFO - Epoch  40 | Loss: 7.8742 | Val R : -0.1588 | Val Acc: 0.7286
+2026-02-03 10:37:32 - training - INFO - Epoch  50 | Loss: 6.6863 | Val R : -0.1421 | Val Acc: 0.7250
+2026-02-03 10:40:35 - training - INFO - Epoch  60 | Loss: 6.3905 | Val R : -0.1095 | Val Acc: 0.7643
+2026-02-03 10:43:37 - training - INFO - Epoch  70 | Loss: 6.1026 | Val R : -0.1184 | Val Acc: 0.8679
+2026-02-03 10:46:39 - training - INFO - Epoch  80 | Loss: 6.0892 | Val R : -0.0525 | Val Acc: 0.8714
+2026-02-03 10:49:39 - training - INFO - Epoch  90 | Loss: 6.1580 | Val R : 0.0530 | Val Acc: 0.8500
+2026-02-03 10:52:39 - training - INFO - Epoch 100 | Loss: 5.6820 | Val R : 0.0506 | Val Acc: 0.8357
+2026-02-03 10:52:39 - training - INFO - Stage 1 complete
+
+2026-02-03 10:52:39 - training - INFO - ================================================================================
+2026-02-03 10:52:39 - training - INFO - STAGE 2: Full Data Training (300 epochs)
+2026-02-03 10:52:39 - training - INFO - ================================================================================
+2026-02-03 10:53:11 - training - INFO - Epoch   1 | Loss: 5.4736 | Val R : 0.1775 | Val Acc: 0.8821 | Val MAE: 0.4362
+2026-02-03 11:00:18 - training - INFO - Epoch  15 | Loss: 5.4959 | Val R : 0.5164 | Val Acc: 0.9071 | Val MAE: 0.3226
+2026-02-03 11:07:54 - training - INFO - Epoch  30 | Loss: 4.8081 | Val R : 0.6293 | Val Acc: 0.9179 | Val MAE: 0.2788
+2026-02-03 11:15:31 - training - INFO - Epoch  45 | Loss: 4.6878 | Val R : 0.6627 | Val Acc: 0.9071 | Val MAE: 0.2663
+2026-02-03 11:23:09 - training - INFO - Epoch  60 | Loss: 4.5970 | Val R : 0.6077 | Val Acc: 0.9286 | Val MAE: 0.2923
+2026-02-03 11:30:50 - training - INFO - Epoch  75 | Loss: 4.4881 | Val R : 0.7696 | Val Acc: 0.9250 | Val MAE: 0.1976
+2026-02-03 11:38:32 - training - INFO - Epoch  90 | Loss: 4.2210 | Val R : 0.7674 | Val Acc: 0.9286 | Val MAE: 0.1984
+2026-02-03 11:46:13 - training - INFO - Epoch 105 | Loss: 4.1314 | Val R : 0.7782 | Val Acc: 0.9429 | Val MAE: 0.1922
+2026-02-03 11:53:54 - training - INFO - Epoch 120 | Loss: 4.1572 | Val R : 0.8378 | Val Acc: 0.9393 | Val MAE: 0.1270
+2026-02-03 12:01:36 - training - INFO - Epoch 135 | Loss: 4.1171 | Val R : 0.8217 | Val Acc: 0.9393 | Val MAE: 0.1651
+2026-02-03 12:09:18 - training - INFO - Epoch 150 | Loss: 4.1220 | Val R : 0.8047 | Val Acc: 0.9429 | Val MAE: 0.1819
+2026-02-03 12:17:00 - training - INFO - Epoch 165 | Loss: 3.7614 | Val R : 0.8330 | Val Acc: 0.9357 | Val MAE: 0.1593
+2026-02-03 12:24:31 - training - INFO - Epoch 180 | Loss: 4.2650 | Val R : 0.8222 | Val Acc: 0.9393 | Val MAE: 0.1721
+2026-02-03 12:32:11 - training - INFO - Epoch 195 | Loss: 3.6697 | Val R : 0.8249 | Val Acc: 0.9393 | Val MAE: 0.1608
+2026-02-03 12:39:52 - training - INFO - Epoch 210 | Loss: 3.6505 | Val R : 0.8249 | Val Acc: 0.9429 | Val MAE: 0.1649
+2026-02-03 12:47:32 - training - INFO - Epoch 225 | Loss: 4.1592 | Val R : 0.8346 | Val Acc: 0.9464 | Val MAE: 0.1616
+2026-02-03 12:55:15 - training - INFO - Epoch 240 | Loss: 3.5590 | Val R : 0.8303 | Val Acc: 0.9393 | Val MAE: 0.1634
+2026-02-03 13:02:57 - training - INFO - Epoch 255 | Loss: 3.7116 | Val R : 0.8302 | Val Acc: 0.9393 | Val MAE: 0.1644
+2026-02-03 13:10:39 - training - INFO - Epoch 270 | Loss: 3.6164 | Val R : 0.8279 | Val Acc: 0.9393 | Val MAE: 0.1639
+2026-02-03 13:18:26 - training - INFO - Epoch 285 | Loss: 3.5372 | Val R : 0.8318 | Val Acc: 0.9393 | Val MAE: 0.1627
+2026-02-03 13:26:05 - training - INFO - Epoch 300 | Loss: 3.7331 | Val R : 0.8321 | Val Acc: 0.9393 | Val MAE: 0.1623
+2026-02-03 13:26:11 - training - INFO - 
+================================================================================
+2026-02-03 13:26:11 - training - INFO - TEST RESULTS:
+2026-02-03 13:26:11 - training - INFO -   R : 0.8044
+2026-02-03 13:26:11 - training - INFO -   RMSE: 0.2428
+2026-02-03 13:26:11 - training - INFO -   MAE: 0.1729
+2026-02-03 13:26:11 - training - INFO -   Weighted Accuracy: 0.8816
+2026-02-03 13:26:11 - training - INFO - ================================================================================
+
+2026-02-03 13:26:11 - training - INFO - [OK] Training completed in 3h 3m 30s
+2026-02-03 13:26:12 - training - INFO - [OK] Model saved: fold_3_seed_1.pt
+
+2026-02-03 13:26:12 - training - INFO - 
+--------------------------------------------------------------------------------
+2026-02-03 13:26:12 - training - INFO - Training Model 2/3 (seed=243)
+2026-02-03 13:26:12 - training - INFO - --------------------------------------------------------------------------------
+
+2026-02-03 13:26:12 - training - INFO - Model Architecture:
+2026-02-03 13:26:12 - training - INFO -   Total parameters:     21,382,085
+2026-02-03 13:26:12 - training - INFO -   Trainable parameters: 21,382,085
+
+2026-02-03 13:26:12 - training - INFO - ================================================================================
+2026-02-03 13:26:12 - training - INFO - STAGE 1: Balanced Training (100 epochs)
+2026-02-03 13:26:12 - training - INFO - ================================================================================
+2026-02-03 13:26:32 - training - INFO - Epoch   1 | Loss: 83.4791 | Val R : -110.3886 | Val Acc: 0.1107
+2026-02-03 13:29:19 - training - INFO - Epoch  10 | Loss: 17.4423 | Val R : -0.1201 | Val Acc: 0.1286
+2026-02-03 13:32:21 - training - INFO - Epoch  20 | Loss: 10.7795 | Val R : -2.2402 | Val Acc: 0.3607
+2026-02-03 13:35:23 - training - INFO - Epoch  30 | Loss: 8.0112 | Val R : -0.6231 | Val Acc: 0.7107
+2026-02-03 13:38:37 - training - INFO - Epoch  40 | Loss: 7.4979 | Val R : -0.3477 | Val Acc: 0.7393
+2026-02-03 13:41:39 - training - INFO - Epoch  50 | Loss: 6.9030 | Val R : -0.0998 | Val Acc: 0.7643
+2026-02-03 13:44:42 - training - INFO - Epoch  60 | Loss: 6.3394 | Val R : -0.0856 | Val Acc: 0.7857
+2026-02-03 13:47:45 - training - INFO - Epoch  70 | Loss: 6.0256 | Val R : 0.0561 | Val Acc: 0.7821
+2026-02-03 13:50:49 - training - INFO - Epoch  80 | Loss: 6.3450 | Val R : 0.2184 | Val Acc: 0.8286
+2026-02-03 13:53:51 - training - INFO - Epoch  90 | Loss: 6.3141 | Val R : 0.2554 | Val Acc: 0.8643
+2026-02-03 13:56:53 - training - INFO - Epoch 100 | Loss: 6.0539 | Val R : 0.2506 | Val Acc: 0.8571
+2026-02-03 13:56:53 - training - INFO - Stage 1 complete
+
+2026-02-03 13:56:53 - training - INFO - ================================================================================
+2026-02-03 13:56:53 - training - INFO - STAGE 2: Full Data Training (300 epochs)
+2026-02-03 13:56:53 - training - INFO - ================================================================================
+2026-02-03 13:57:25 - training - INFO - Epoch   1 | Loss: 6.0044 | Val R : 0.3404 | Val Acc: 0.8786 | Val MAE: 0.3790
+2026-02-03 14:04:39 - training - INFO - Epoch  15 | Loss: 5.6966 | Val R : 0.2989 | Val Acc: 0.8893 | Val MAE: 0.4039
+2026-02-03 14:12:21 - training - INFO - Epoch  30 | Loss: 4.7787 | Val R : 0.6845 | Val Acc: 0.9143 | Val MAE: 0.2483
+2026-02-03 14:20:03 - training - INFO - Epoch  45 | Loss: 4.8822 | Val R : 0.7236 | Val Acc: 0.9286 | Val MAE: 0.2167
+2026-02-03 14:27:44 - training - INFO - Epoch  60 | Loss: 4.3776 | Val R : 0.7988 | Val Acc: 0.9286 | Val MAE: 0.1565
+2026-02-03 14:35:34 - training - INFO - Epoch  75 | Loss: 4.2719 | Val R : 0.7712 | Val Acc: 0.9286 | Val MAE: 0.2013
+2026-02-03 14:43:16 - training - INFO - Epoch  90 | Loss: 4.4089 | Val R : 0.7632 | Val Acc: 0.9286 | Val MAE: 0.2065
+2026-02-03 14:50:56 - training - INFO - Epoch 105 | Loss: 4.0986 | Val R : 0.8365 | Val Acc: 0.9321 | Val MAE: 0.1453
+2026-02-03 14:58:29 - training - INFO - Epoch 120 | Loss: 4.1010 | Val R : 0.7801 | Val Acc: 0.9321 | Val MAE: 0.1884
+2026-02-03 15:06:10 - training - INFO - Epoch 135 | Loss: 3.9911 | Val R : 0.7959 | Val Acc: 0.9357 | Val MAE: 0.1838
+2026-02-03 15:15:22 - training - INFO - Epoch 150 | Loss: 3.8478 | Val R : 0.8133 | Val Acc: 0.9393 | Val MAE: 0.1750
+2026-02-03 15:28:54 - training - INFO - Epoch 165 | Loss: 3.6043 | Val R : 0.8352 | Val Acc: 0.9393 | Val MAE: 0.1547
+2026-02-03 15:39:59 - training - INFO - Epoch 180 | Loss: 3.7816 | Val R : 0.8258 | Val Acc: 0.9357 | Val MAE: 0.1668
+2026-02-03 15:56:32 - training - INFO - Epoch 195 | Loss: 3.7853 | Val R : 0.8420 | Val Acc: 0.9429 | Val MAE: 0.1435
+2026-02-03 16:06:03 - training - INFO - Epoch 210 | Loss: 3.7083 | Val R : 0.8392 | Val Acc: 0.9357 | Val MAE: 0.1499
+2026-02-03 16:13:49 - training - INFO - Epoch 225 | Loss: 3.5250 | Val R : 0.8359 | Val Acc: 0.9357 | Val MAE: 0.1501
+2026-02-03 16:21:32 - training - INFO - Epoch 240 | Loss: 3.5789 | Val R : 0.8458 | Val Acc: 0.9357 | Val MAE: 0.1462
+2026-02-03 16:29:12 - training - INFO - Epoch 255 | Loss: 3.6339 | Val R : 0.8413 | Val Acc: 0.9357 | Val MAE: 0.1484
+2026-02-03 16:36:56 - training - INFO - Epoch 270 | Loss: 3.7115 | Val R : 0.8385 | Val Acc: 0.9357 | Val MAE: 0.1516
+2026-02-03 16:44:39 - training - INFO - Epoch 285 | Loss: 3.8401 | Val R : 0.8406 | Val Acc: 0.9357 | Val MAE: 0.1502
+2026-02-03 16:52:21 - training - INFO - Epoch 300 | Loss: 3.6198 | Val R : 0.8362 | Val Acc: 0.9393 | Val MAE: 0.1536
+2026-02-03 16:52:27 - training - INFO - 
+================================================================================
+2026-02-03 16:52:27 - training - INFO - TEST RESULTS:
+2026-02-03 16:52:27 - training - INFO -   R : 0.8077
+2026-02-03 16:52:27 - training - INFO -   RMSE: 0.2407
+2026-02-03 16:52:27 - training - INFO -   MAE: 0.1580
+2026-02-03 16:52:27 - training - INFO -   Weighted Accuracy: 0.8773
+2026-02-03 16:52:27 - training - INFO - ================================================================================
+
+2026-02-03 16:52:27 - training - INFO - [OK] Training completed in 3h 26m 14s
+2026-02-03 16:52:27 - training - INFO - [OK] Model saved: fold_3_seed_2.pt
+
+2026-02-03 16:52:27 - training - INFO - 
+--------------------------------------------------------------------------------
+2026-02-03 16:52:27 - training - INFO - Training Model 3/3 (seed=244)
+2026-02-03 16:52:27 - training - INFO - --------------------------------------------------------------------------------
+
+2026-02-03 16:52:27 - training - INFO - Model Architecture:
+2026-02-03 16:52:27 - training - INFO -   Total parameters:     21,382,085
+2026-02-03 16:52:27 - training - INFO -   Trainable parameters: 21,382,085
+
+2026-02-03 16:52:27 - training - INFO - ================================================================================
+2026-02-03 16:52:27 - training - INFO - STAGE 1: Balanced Training (100 epochs)
+2026-02-03 16:52:27 - training - INFO - ================================================================================
+2026-02-03 16:52:47 - training - INFO - Epoch   1 | Loss: 86.5759 | Val R : -110.6261 | Val Acc: 0.3536
+2026-02-03 16:55:32 - training - INFO - Epoch  10 | Loss: 18.4087 | Val R : -0.4459 | Val Acc: 0.1964
+2026-02-03 16:58:34 - training - INFO - Epoch  20 | Loss: 11.0037 | Val R : -1.5965 | Val Acc: 0.6214
+2026-02-03 17:01:37 - training - INFO - Epoch  30 | Loss: 8.7356 | Val R : -0.8561 | Val Acc: 0.6286
+2026-02-03 17:04:39 - training - INFO - Epoch  40 | Loss: 7.5704 | Val R : -0.8834 | Val Acc: 0.7250
+2026-02-03 17:07:41 - training - INFO - Epoch  50 | Loss: 7.2235 | Val R : -0.3914 | Val Acc: 0.7643
+2026-02-03 17:10:44 - training - INFO - Epoch  60 | Loss: 6.5624 | Val R : -0.1358 | Val Acc: 0.8107
+2026-02-03 17:13:46 - training - INFO - Epoch  70 | Loss: 6.6556 | Val R : -0.1826 | Val Acc: 0.8321
+2026-02-03 17:16:48 - training - INFO - Epoch  80 | Loss: 6.2941 | Val R : -0.0185 | Val Acc: 0.8679
+2026-02-03 17:19:50 - training - INFO - Epoch  90 | Loss: 5.8576 | Val R : -0.0405 | Val Acc: 0.8536
+2026-02-03 17:22:51 - training - INFO - Epoch 100 | Loss: 6.1162 | Val R : -0.0895 | Val Acc: 0.8607
+2026-02-03 17:22:52 - training - INFO - Stage 1 complete
+
+2026-02-03 17:22:52 - training - INFO - ================================================================================
+2026-02-03 17:22:52 - training - INFO - STAGE 2: Full Data Training (300 epochs)
+2026-02-03 17:22:52 - training - INFO - ================================================================================
+2026-02-03 17:23:24 - training - INFO - Epoch   1 | Loss: 5.7795 | Val R : 0.0614 | Val Acc: 0.8786 | Val MAE: 0.4692
+2026-02-03 17:30:35 - training - INFO - Epoch  15 | Loss: 5.2581 | Val R : 0.4840 | Val Acc: 0.9000 | Val MAE: 0.3317
+2026-02-03 17:38:16 - training - INFO - Epoch  30 | Loss: 5.0507 | Val R : 0.4981 | Val Acc: 0.9107 | Val MAE: 0.3374
+2026-02-03 17:45:56 - training - INFO - Epoch  45 | Loss: 4.7692 | Val R : 0.5778 | Val Acc: 0.9071 | Val MAE: 0.2961
+2026-02-03 17:53:37 - training - INFO - Epoch  60 | Loss: 4.6734 | Val R : 0.7730 | Val Acc: 0.9286 | Val MAE: 0.1938
+2026-02-03 18:01:18 - training - INFO - Epoch  75 | Loss: 4.5186 | Val R : 0.6290 | Val Acc: 0.9250 | Val MAE: 0.2849
+2026-02-03 18:09:00 - training - INFO - Epoch  90 | Loss: 4.2391 | Val R : 0.6850 | Val Acc: 0.9179 | Val MAE: 0.2458
+2026-02-03 18:16:43 - training - INFO - Epoch 105 | Loss: 4.2074 | Val R : 0.7576 | Val Acc: 0.9250 | Val MAE: 0.1873
+2026-02-03 18:24:25 - training - INFO - Epoch 120 | Loss: 3.8553 | Val R : 0.7806 | Val Acc: 0.9286 | Val MAE: 0.1859
+2026-02-03 18:32:05 - training - INFO - Epoch 135 | Loss: 4.1322 | Val R : 0.7616 | Val Acc: 0.9286 | Val MAE: 0.2084
+2026-02-03 18:39:47 - training - INFO - Epoch 150 | Loss: 3.6503 | Val R : 0.8160 | Val Acc: 0.9393 | Val MAE: 0.1735
+2026-02-03 18:47:29 - training - INFO - Epoch 165 | Loss: 3.9763 | Val R : 0.8200 | Val Acc: 0.9429 | Val MAE: 0.1683
+2026-02-03 18:55:12 - training - INFO - Epoch 180 | Loss: 4.1219 | Val R : 0.8263 | Val Acc: 0.9429 | Val MAE: 0.1598
+2026-02-03 19:02:53 - training - INFO - Epoch 195 | Loss: 3.8511 | Val R : 0.8023 | Val Acc: 0.9393 | Val MAE: 0.1790
+2026-02-03 19:10:34 - training - INFO - Epoch 210 | Loss: 3.7110 | Val R : 0.8277 | Val Acc: 0.9429 | Val MAE: 0.1573
+2026-02-03 19:18:16 - training - INFO - Epoch 225 | Loss: 3.4782 | Val R : 0.8416 | Val Acc: 0.9357 | Val MAE: 0.1523
+2026-02-03 19:25:57 - training - INFO - Epoch 240 | Loss: 3.8616 | Val R : 0.8467 | Val Acc: 0.9429 | Val MAE: 0.1511
+2026-02-03 19:33:38 - training - INFO - Epoch 255 | Loss: 3.8567 | Val R : 0.8457 | Val Acc: 0.9357 | Val MAE: 0.1530
+2026-02-03 19:41:19 - training - INFO - Epoch 270 | Loss: 3.6659 | Val R : 0.8283 | Val Acc: 0.9393 | Val MAE: 0.1677
+2026-02-03 19:49:01 - training - INFO - Epoch 285 | Loss: 3.4609 | Val R : 0.8402 | Val Acc: 0.9393 | Val MAE: 0.1553
+2026-02-03 19:56:42 - training - INFO - Epoch 300 | Loss: 3.7935 | Val R : 0.8422 | Val Acc: 0.9393 | Val MAE: 0.1548
+2026-02-03 19:56:46 - training - INFO - 
+================================================================================
+2026-02-03 19:56:46 - training - INFO - TEST RESULTS:
+2026-02-03 19:56:46 - training - INFO -   R : 0.8085
+2026-02-03 19:56:46 - training - INFO -   RMSE: 0.2402
+2026-02-03 19:56:46 - training - INFO -   MAE: 0.1663
+2026-02-03 19:56:46 - training - INFO -   Weighted Accuracy: 0.8802
+2026-02-03 19:56:46 - training - INFO - ================================================================================
+
+2026-02-03 19:56:46 - training - INFO - [OK] Training completed in 3h 4m 18s
+2026-02-03 19:56:46 - training - INFO - [OK] Model saved: fold_3_seed_3.pt
+
+2026-02-03 19:56:47 - training - INFO - [OK] Best model saved: best_model.pt
+2026-02-03 19:56:47 - training - INFO -   Fold 1, Seed 1
+
+2026-02-03 19:56:47 - training - INFO - Generating training summary...
+2026-02-03 19:56:48 - training - INFO - [OK] Training summary saved:
+2026-02-03 19:56:48 - training - INFO -   training_summary.json
+2026-02-03 19:56:48 - training - INFO -   training_summary.csv
+
+2026-02-03 19:56:48 - training - INFO - ================================================================================
+2026-02-03 19:56:48 - training - INFO - OVERALL PERFORMANCE SUMMARY
+2026-02-03 19:56:48 - training - INFO - ================================================================================
+2026-02-03 19:56:48 - training - INFO - Test R  Score:  0.8077   0.0211
+2026-02-03 19:56:48 - training - INFO - Test MAE:       0.1695   0.0090
+2026-02-03 19:56:48 - training - INFO - Test Weighted Accuracy:  0.8849   0.0123
+2026-02-03 19:56:48 - training - INFO - ================================================================================

@@ -1,0 +1,40 @@
+================================================================================
+ ACE2-RBD BINDING PREDICTION - PREPROCESSING
+================================================================================
+
+Step 1: Loading data...
+
+
+pKd statistics:
+  Mean: 6.136
+  Std:  0.553
+  Min:  5.378
+  Max:  8.004
+
+
+
+Step 2: Generating ESM2 embeddings...
+Loading ESM2 model: esm2_t12_35M_UR50D
+  Number of layers: 12
+✓ Model loaded on cuda
+  Embedding dimension: 480
+
+  Generating RBD embeddings...
+Generating embeddings for RBD sequences...
+Embedding: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 527/527 [00:11<00:00, 46.63it/s] 
+
+  Generating ACE2 embeddings...
+Generating embeddings for ACE22 sequences...
+Embedding: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 527/527 [01:01<00:00,  8.58it/s] 
+
+Step 3: Padding and standardizing embeddings...
+  Normalization stats computed from RAW embeddings:
+    RBD  mean: 0.004991, std: 0.153481
+    ACE2 mean: 0.005444, std: 0.228234
+  RBD  embeddings shape: (223, 480)
+  ACE2 embeddings shape: (828, 480)
+
+Step 4: Saving to .\Embeddings\embeddings_finetuned.npz...
+Preprocessing complete!
+  Output saved to: Embeddings\embeddings_finetuned.npz
+  File size: 3609.57 MB

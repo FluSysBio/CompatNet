@@ -1,0 +1,20 @@
+{
+  "model_path": "./outputs/models/combined_model.pt",
+  "split": "random_test_split",
+  "test_size": 0.15,
+  "random_seed": 42,
+  "regression": {
+    "r2": 0.8524,
+    "rmse": 0.2128,
+    "mae": 0.1545,
+    "pearson_r": 0.9464
+  },
+  "classification": {
+    "accuracy": 0.9209,
+    "weighted_accuracy": 0.8913,
+    "weighted_precision": 0.8552,
+    "weighted_recall": 0.8713,
+    "weighted_f1": 0.8628
+  },
+  "plots_saved_to": "./notebook_plots"
+}

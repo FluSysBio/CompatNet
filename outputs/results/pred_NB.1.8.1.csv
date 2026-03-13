@@ -1,0 +1,7 @@
+Sample_ID,Lineage,ACE2_Species,Predicted_Kd_nM,Predicted_Class
+NB.1.8.1_WTD,NB.1.8.1,WTD,131.3855,medium
+NB.1.8.1_BTD,NB.1.8.1,BTD,315.5833,medium
+NB.1.8.1_PhilippineDeer,NB.1.8.1,PhilippineDeer,159.16656,medium
+NB.1.8.1_Elk,NB.1.8.1,Elk,138.72772,medium
+NB.1.8.1_AxisDeer,NB.1.8.1,AxisDeer,158.92732,medium
+NB.1.8.1_MooseDeer,NB.1.8.1,MooseDeer,261.91907,medium

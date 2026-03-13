@@ -1,0 +1,108 @@
+# Configuration Management for SARS-CoV2:ACE2-RBD Binding Prediction Project
+# ======================================================
+
+# Random seed for reproducibility
+seed: 42
+
+# Device (cuda or cpu)
+device: cuda
+
+# ========================================
+# Paths Configuration
+# ========================================
+paths:
+  output_dir: ./outputs
+  models_dir: ./outputs/models
+  results_dir: ./outputs/results
+
+# ========================================
+# Model Configuration
+# ========================================
+model:
+  esm2_model: esm2_t12_35M_UR50D
+  max_rbd_len: 350
+  max_ace2_len: 900
+  
+  # Model architecture
+  embedding_dim: 480  # 480 for 35M model, 320 for 8M model
+  num_classes: 4
+  dropout: 0.15
+  drop_path: 0.15
+  num_attention_heads: 12
+  class_names:
+    - strong
+    - medium
+    - weak
+    - no_bind
+
+# ========================================
+# Training Configuration
+# ========================================
+training:
+  # Cross-validation
+  num_folds: 3
+  num_seeds: 3
+
+  # Training duration
+  epochs: 400
+  patience: 40
+
+  # Optimizer parameters
+  learning_rate: 2.0e-5
+  weight_decay: 1.0e-4
+  batch_size: 8
+  eval_batch_size: 32
+  grad_accumulation: 2
+
+  # Learning rate schedule
+  warmup_epochs: 15
+  min_lr_ratio: 0.01
+
+  # SAM optimizer
+  sam_rho: 0.05
+
+  # Two-stage training
+  use_two_stage: true
+  stage1_epochs: 100
+  stage2_epochs: 300
+
+  # Loss functions
+  use_class_weights: true
+  use_focal_loss: true
+  use_ldam: true
+  focal_gamma: 3.0      
+  ldam_max_m: 0.7
+  ldam_s: 30
+
+  class_weights:
+    - 2.5   # strong
+    - 2.0   # medium
+    - 6.0   # weak
+    - 0.5   # no_bind
+
+  # Augmentation
+  use_mixup: true
+  mixup_alpha: 0.4
+  class_balanced_mixup: true
+
+  # Loss weights
+  regression_weight: 1.5
+  classification_weight: 1.0
+
+  # Gradient clipping
+  max_grad_norm: 1.0
+
+# ========================================
+# Inference Configuration
+# ========================================
+inference:
+  # Model selection
+  auto_select_best: true
+  model_path: ""
+
+  # Input/output
+  test_data_path: ""
+  output_csv: ./outputs/predictions.csv
+
+  # Inference parameters
+  batch_size: 32

@@ -1,0 +1,116 @@
+{
+  "created_utc": "2026-03-10T08:35:23.563778Z",
+  "total_time_seconds": 14877.70,
+  "best_model": {
+    "seed": 42,
+    "run": 1,
+    "val_r2": 0.83,
+    "model_path": "model_fold1_seed42.pt"
+  },
+  "cv_statistics": {
+    "val_r2": {
+      "mean": 0.83
+    },
+    "test_r2": {
+      "mean": 0.81
+    },
+    "val_mae": {
+      "mean": 0.18
+    },
+    "test_mae": {
+      "mean": 0.17
+    },
+    "val_rmse": {
+      "mean": 0.24
+    },
+    "test_rmse": {
+      "mean": 0.24
+    },
+    "val_accuracy": {
+      "mean": 0.87
+    },
+    "test_accuracy": {
+      "mean": 0.89
+    },
+    "val_f1_weighted": {
+      "mean": 0.87
+    },
+    "test_f1_weighted": {
+      "mean": 0.89
+    },
+    "val_f1_macro": {
+      "mean": 0.79
+    },
+    "test_f1_macro": {
+      "mean": 0.80
+    },
+    "val_precision_weighted": {
+      "mean": 0.88
+    },
+    "test_precision_weighted": {
+      "mean": 0.89
+    },
+    "val_precision_macro": {
+      "mean": 0.79
+    },
+    "test_precision_macro": {
+      "mean": 0.81
+    },
+    "val_recall_weighted": {
+      "mean": 0.87
+    },
+    "test_recall_weighted": {
+      "mean": 0.89
+    },
+    "val_recall_macro": {
+      "mean": 0.80
+    },
+    "test_recall_macro": {
+      "mean": 0.79
+    }
+  },
+  "individual_results": [
+    {
+      "seed": 42,
+      "run": 1,
+      "train": {
+        "r2": 0.88,
+        "mae": 0.14,
+        "rmse": 0.19,
+        "accuracy": 0.95,
+        "f1_weighted": 0.95,
+        "f1_macro": 0.91,
+        "precision_weighted": 0.95,
+        "precision_macro": 0.90,
+        "recall_weighted": 0.95,
+        "recall_macro": 0.91
+      },
+      "val": {
+        "r2": 0.83,
+        "mae": 0.18,
+        "rmse": 0.24,
+        "accuracy": 0.87,
+        "f1_weighted": 0.86,
+        "f1_macro": 0.79,
+        "precision_weighted": 0.88,
+        "precision_macro": 0.79,
+        "recall_weighted": 0.87,
+        "recall_macro": 0.80
+      },
+      "test": {
+        "r2": 0.81,
+        "mae": 0.17,
+        "rmse": 0.24,
+        "accuracy": 0.89,
+        "f1_weighted": 0.86,
+        "f1_macro": 0.80,
+        "precision_weighted": 0.87,
+        "precision_macro": 0.81,
+        "recall_weighted": 0.87,
+        "recall_macro": 0.79
+      },
+      "model_file": "model_fold1_seed42.pt"
+    }
+  ],
+  "has_normalization_stats": true
+}

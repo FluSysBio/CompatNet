@@ -1,0 +1,15 @@
+# Model weights
+*.pt
+*.pth
+*.safetensors
+*.ckpt
+
+# Embeddings / numpy files
+*.npz
+
+# Output folders
+Embeddings/*.npz
+runs/stage1/merged_backbone/*.safetensors
+# Python cache
+__pycache__/
+*.pyc

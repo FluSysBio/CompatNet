@@ -1,0 +1,10 @@
+[
+  {
+    "Sample_ID": "sample_001",
+    "RBD_Sequence": "NITNLCPFGEVFNATR...",
+    "ACE2_sequence": "MSSSSWLLLSLVAVTA...",
+    "binding_affinity": 48.5,
+    "pKd": 7.314,
+    "Class_ID": 0
+  }
+]

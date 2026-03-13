@@ -1,0 +1,34 @@
+2026-03-11 16:17:14 - inference - INFO - ================================================================================
+2026-03-11 16:17:14 - inference - INFO - ACE2-RBD BINDING PREDICTION - INFERENCE
+2026-03-11 16:17:14 - inference - INFO - ================================================================================
+2026-03-11 16:17:14 - inference - INFO - Log file:   outputs\inference_logs\inference_20260311_161714.log
+2026-03-11 16:17:14 - inference - INFO - Model:      .\outputs\models\combined_model.pt
+2026-03-11 16:17:14 - inference - INFO - Sub-model:  auto-detect
+2026-03-11 16:17:14 - inference - INFO - Input:      .\TestDataset\test_data_NB.1.8.json
+2026-03-11 16:17:14 - inference - INFO - Output:     .\outputs\results\prediction_NBB.1.8.csv
+2026-03-11 16:17:14 - inference - INFO - Device:     cuda
+2026-03-11 16:17:14 - inference - INFO - 
+Loading model checkpoint...
+2026-03-11 16:17:17 - inference - INFO - 
+Loading test data...
+2026-03-11 16:17:17 - inference - INFO -   Loaded 6 test samples
+2026-03-11 16:17:17 - inference - INFO - 
+Generating ESM-2 embeddings...
+2026-03-11 16:17:24 - inference - INFO - 
+Running predictions on 6 samples...
+2026-03-11 16:17:27 - inference - INFO - 
+================================================================================
+2026-03-11 16:17:27 - inference - INFO - INFERENCE COMPLETE
+2026-03-11 16:17:27 - inference - INFO - ================================================================================
+2026-03-11 16:17:27 - inference - INFO - Total predictions : 6
+2026-03-11 16:17:27 - inference - INFO - Kd range          : 131.39   315.58 nM  (mean 194.28 nM)
+2026-03-11 16:17:27 - inference - INFO - 
+Class distribution (from Kd thresholds):
+2026-03-11 16:17:27 - inference - INFO -   strong    :     0  (0.0 %)
+2026-03-11 16:17:27 - inference - INFO -   medium    :     6  (100.0 %)
+2026-03-11 16:17:27 - inference - INFO -   weak      :     0  (0.0 %)
+2026-03-11 16:17:27 - inference - INFO -   no_bind   :     0  (0.0 %)
+2026-03-11 16:17:27 - inference - INFO - 
+Results saved : .\outputs\results\preds_NBB.csv
+2026-03-11 16:17:27 - inference - INFO - Log saved     : outputs\inference_logs\inference_20260311_161714.log
+2026-03-11 16:17:27 - inference - INFO - ================================================================================
