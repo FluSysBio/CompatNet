@@ -41,6 +41,27 @@ pip install -r requirements.txt
 ```
 
 ## Usage
+## Pre-trained Models
+
+Pre-trained model weights are available on Hugging Face and required before running inference or skipping training.
+
+**Download:** [CompatNet on Hugging Face](https://huggingface.co/Kritika397/CompatNet/tree/main)
+
+After downloading, place the files in the following locations:
+
+```
+CompatNet SARS RBD-ACE2 Model/
+├── outputs/
+│   └── models/
+│       └── combined_model.pt          # Main multi-task model
+│
+└── runs/
+    └── stage1/
+        └── merged_backbone/           # Domain-adapted ESM-2 (LoRA fine-tuned)
+            ├── config.json
+            ├── tokenizer_config.json
+            └── model.safetensors
+```
 
 ### Step 1: Domain-Adapted ESM-2 Fine-Tuning
 
@@ -174,7 +195,7 @@ CompatNet SARS RBD-ACE2 Model/
 ```bibtex
 @article{prasai2026multitask,
   title={Interaction-aware multitask deep learning reveals cross-species receptor compatibility landscapes across sarbecoviruses},
-  author={Prasai K, Chandler JC, Espada C, Wiese R, Long Y, Heale J, Roberts N, Tao YJ, DeLiberto TJ, Wan X-F},
+  author={Prasai K, Chandler JC, Espada C, Wiese R, Long Y, Sean P. Streich, Heale J, Roberts N, Tao YJ, DeLiberto TJ, Wan X-F},
   journal={To be added},
   year={2026}
 }
