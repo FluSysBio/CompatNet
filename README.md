@@ -21,7 +21,8 @@ The model combines:
 
 ## Model Architecture pipeline
 
-![Model Architecture](./images/model_architecture.png)
+![Stage 1 Architecture](./images/stage1_architecture.png)
+![Stage2 Architecture](./images/model_architecture.png)
 
 Key specifications:
 - Parameters: ~20M
