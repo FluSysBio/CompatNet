@@ -21,8 +21,11 @@ The model combines:
 
 ## Model Architecture pipeline
 
-![Stage 1 Architecture](./images/stage1_architecture.png)
-![Stage2 Architecture](./images/model_architecture.png)
+**Stage 1 — Fine Tuning ESM-2 Model and LoRA masked-LM adaptation model**
+<img src="./images/stage1_architecture.png" alt="Stage 1 Architecture" width="350"/>
+
+**Stage 2 — Multi-task cross attention model architecture**
+<img src="./images/model_architecture.png" alt="Model Architecture" width="450"/>
 
 Key specifications:
 - Parameters: ~20M
